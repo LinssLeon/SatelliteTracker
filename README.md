@@ -1,4 +1,4 @@
-# 🚀 SatelliteTracker - Version 1.0.1 - How to Use
+# 🚀 SatelliteTracker - Version 1.0.4 - How to Use
 SatelliteTracker ist eine Konsolenanwendung, die es dir ermöglicht, die Internationale Raumstation (ISS) in Echtzeit zu verfolgen und ihren Standort auf der Erde zu bestimmen. Die Anwendung nutzt verschiedene APIs, um die ISS-Position und den Standort basierend auf den Koordinaten zu ermitteln.
 
 ## 🚀 Features
