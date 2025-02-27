@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Threading.Tasks;   
+using System.Threading.Tasks;
 
 namespace SatelliteTracker;
 
@@ -54,7 +54,7 @@ class Program
             Console.WriteLine($"Längengrad: {issData.Position.Longitude}");
             Console.WriteLine($"Zeitstempel: {DateTimeOffset.FromUnixTimeSeconds(issData.TimeStamp)}");
 
-            // Geocoding-Service für die Umwandlung der Koordinaten in den Standort
+            // Geocoding-Service für den Standort der ISS
             var location = await geocodingService.GetLocationAsync(issData.Position.Latitude.ToString(), issData.Position.Longitude.ToString());
             Console.WriteLine($"Standort: {location}");
         }
@@ -63,6 +63,7 @@ class Program
             Console.WriteLine("Konnte die ISS-Position nicht abrufen.");
         }
     }
+
 
     static async Task LiveTrackingISS(SatelliteService satelliteService, GeocodingService geocodingService)
     {
@@ -90,9 +91,6 @@ class Program
             }
 
             await Task.Delay(10000);
-            //Alle 10 sek eine API-Request, ACHTUNG auf POSITIONSTACK hat man im FREE
-            //PLAN nur 100 Requests Pro Monat
         }
     }
 }
-
