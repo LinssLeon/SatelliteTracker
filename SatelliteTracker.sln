@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SatelliteTracker", "SatelliteTracker.csproj", "{12CF58F3-FD88-4667-BC61-CD05BD9290D6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12CF58F3-FD88-4667-BC61-CD05BD9290D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12CF58F3-FD88-4667-BC61-CD05BD9290D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12CF58F3-FD88-4667-BC61-CD05BD9290D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12CF58F3-FD88-4667-BC61-CD05BD9290D6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C022DACC-F7EA-4B77-BBA9-28081DC8ED99}
+	EndGlobalSection
+EndGlobal
