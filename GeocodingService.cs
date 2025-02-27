@@ -8,7 +8,7 @@ namespace SatelliteTracker
     public class GeocodingService
     {
         private readonly HttpClient _client;
-        private readonly string _apiKey = "fe93fea18fc47d167d15a3b2ee3643ef";  
+        private readonly string _apiKey = "DEIN_API_SCHLÜSSEL";  
 
         public GeocodingService()
         {
