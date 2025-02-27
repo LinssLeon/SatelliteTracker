@@ -8,7 +8,7 @@ namespace SatelliteTracker
     public class GeocodingService
     {
         private readonly HttpClient _client;
-        private readonly string _apiKey = "fe93fea18fc47d167d15a3b2ee3643ef";  // Dein API-Schlüssel, ohne extra Zeilenumbruch
+        private readonly string _apiKey = "fe93fea18fc47d167d15a3b2ee3643ef";  
 
         public GeocodingService()
         {
@@ -28,7 +28,7 @@ namespace SatelliteTracker
                 // JSON-Antwort in ein dynamisches Objekt umwandeln
                 dynamic result = JsonConvert.DeserializeObject(response);
 
-                // Hier extrahierst du die wichtigsten Informationen (Land und Region)
+                // Extrahieren von Informationen (Land und Region)
                 var country = result.data[0].country;
                 var region = result.data[0].region;
 
