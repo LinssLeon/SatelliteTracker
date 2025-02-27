@@ -78,7 +78,7 @@ Standort: Kalifornien, Vereinigte Staaten
 ```
 
 2. Live-Verfolgung starten
-Wählen Sie Option 2, um die Live-Verfolgung der ISS zu starten. Die Anwendung zeigt in Echtzeit die Aktualisierung der ISS-Position und den geografischen Standort der ISS an. Alle 2 Sekunden wird die Position aktualisiert.
+Wählen Sie Option 2, um die Live-Verfolgung der ISS zu starten. Die Anwendung zeigt in Echtzeit die Aktualisierung der ISS-Position und den geografischen Standort der ISS an. Alle 10 Sekunden wird die Position aktualisiert.
 
 Beispiel-Ausgabe:
 
