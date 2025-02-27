@@ -16,9 +16,8 @@ class Program
             Console.Clear();
             Console.WriteLine("Willkommen bei Satellite Tracker!");
             Console.WriteLine("1) Aktuelle ISS-Position anzeigen");
-            Console.WriteLine("2) Mission starten: Tracke die ISS 5 Mal");
-            Console.WriteLine("3) Live-Tracking der ISS starten");
-            Console.WriteLine("4) Beenden");
+            Console.WriteLine("2) Live-Tracking der ISS starten");
+            Console.WriteLine("3) Beenden");
             Console.Write("Bitte wähle eine Option: ");
 
             var choice = Console.ReadLine();
@@ -29,12 +28,9 @@ class Program
                     await ShowCurrentPosition(satelliteService, geocodingService);
                     break;
                 case "2":
-                    await TrackISS(satelliteService, geocodingService);
-                    break;
-                case "3":
                     await LiveTrackingISS(satelliteService, geocodingService);
                     break;
-                case "4":
+                case "3":
                     running = false;
                     break;
 
@@ -68,25 +64,6 @@ class Program
         }
     }
 
-    static async Task TrackISS(SatelliteService satelliteService, GeocodingService geocodingService)
-    {
-        Console.WriteLine("\nMission: Tracke die ISS 5 Mal!");
-        int updates = 0;
-
-        while (updates < 5)
-        {
-            var issData = await satelliteService.GetISSLocationAsync();
-            if (issData != null)
-            {
-                updates++;
-                Console.WriteLine($"Update {updates}/5 - Breitengrad: {issData.Position.Latitude}, Längengrad: {issData.Position.Longitude}");
-            }
-            await Task.Delay(2000);
-        }
-
-        Console.WriteLine("\n✅ Mission abgeschlossen! Du hast die ISS 5 Mal erfolgreich getrackt.");
-    }
-
     static async Task LiveTrackingISS(SatelliteService satelliteService, GeocodingService geocodingService)
     {
         Console.WriteLine("Live-Verfolgung der ISS startet...");
@@ -113,6 +90,8 @@ class Program
             }
 
             await Task.Delay(10000);
+            //Alle 10 sek eine API-Request, ACHTUNG auf POSITIONSTACK hat man im FREE
+            //PLAN nur 100 Requests Pro Monat
         }
     }
 }
